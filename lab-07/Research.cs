@@ -24,6 +24,12 @@ namespace Lab07
             string result = "";
 
             CalcAll(lambda, mu);
+            
+            result += "Характеристики системы:\n";
+            result += $"Интенсивность потока запросов = {Math.Round(lambda, 2)}\n" +
+                $"Интенсивность потока обслуживания = {Math.Round(mu, 2)}\n" +
+                $"Количество потоков = {n}\n" +
+                $"Время работы = {workSw.ElapsedMilliseconds} мс\n";
 
             Console.WriteLine("Теоретические рассчеты:");
             result += "Теоретические рассчеты:\n";
@@ -66,10 +72,6 @@ namespace Lab07
         string ConsoleWriter(double lambda, double mu)
         {
             string result = 
-                $"Интенсивность потока запросов = {Math.Round(lambda, 2)}\n" +
-                $"Интенсивность потока обслуживания = {Math.Round(mu, 2)}\n" +
-                $"Количество потоков = {n}\n" +
-                $"Время работы = {workSw.ElapsedMilliseconds} мс\n" +
                 $"Приведенная интенсивность потока запросов = {Math.Round(ro, 2)}\n" +
                 $"Вероятность простоя системы = {Math.Round(P0, 2)}\n" +
                 $"Вероятность отказа системы = {Math.Round(Pn, 2)}\n" +

@@ -29,7 +29,10 @@ namespace Lab07
             result += $"Интенсивность потока запросов = {Math.Round(lambda, 2)}\n" +
                 $"Интенсивность потока обслуживания = {Math.Round(mu, 2)}\n" +
                 $"Количество потоков = {n}\n" +
-                $"Время работы = {workSw.ElapsedMilliseconds} мс\n";
+                $"Время работы = {workSw.ElapsedMilliseconds} мс\n" +
+                $"Число заявок: {server.requestCount}\n" +
+                $"Обработано заявок: {server.processedCount}\n" +
+                $"Отклонено заявок: {server.rejectedCount}\n";
 
             Console.WriteLine("Теоретические рассчеты:");
             result += "Теоретические рассчеты:\n";

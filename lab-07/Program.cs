@@ -8,10 +8,10 @@ namespace Lab07
     {
         static void Main()
         {
-            double lambda = 100;
-            int executTime = 100;
+            double lambda = 5;
+            int executTime = 500;
             int n = 5;
-            int requestCount = 100;
+            int requestCount = 10;
 
             Stopwatch workSw = new Stopwatch();
 
